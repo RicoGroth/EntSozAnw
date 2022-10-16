@@ -23,8 +23,8 @@ class Rational (val numerator: Int, val denominator: Int){
     new Rational(this.num * x.denom - x.num * this.denom, this.denom * x.denom)
   }
 
-  def neg(x: Rational): Rational = {
-    new Rational(-this.num, -this.denom)
+  def neg: Rational = {
+    new Rational(-this.num, this.denom)
   }
 
 }

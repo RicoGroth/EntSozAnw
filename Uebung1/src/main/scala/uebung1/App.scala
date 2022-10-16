@@ -5,13 +5,8 @@ object App {
   def main(args: Array[String]): Unit = {
     
     println("Hier startet das erste Scala Programm!")
-    val x= new Rational(2,5)
-    val y= new Rational(3,4)
-    val z= x.max(y)
-    if (z==y) println("Richtiges Ergebnis")
-    	else println("Falsches Ergebnis")
-   
-    // wirft Assertion Failed Exception
-    assert(z==y)
+    val x = new Rational(1, 4)
+    val y = new Rational(2, 4)
+    println(x.sub(y))
   }
 }

@@ -13,7 +13,6 @@ class Rational (val numerator: Int, val denominator: Int){
   }
   require (denominator!=0,"Denominator muss != 0 sein")
 
-  // TODO: check doesn't work as intended
   def num: Int=numerator/gcd
   def denom: Int= denominator/gcd
   def value: Double = (num.toDouble / denom)
@@ -33,6 +32,10 @@ class Rational (val numerator: Int, val denominator: Int){
   def sub(x: Rational): Rational = {
     this.add(x.neg)
   }
+
+  def + (x: Rational): Rational = this add x
+  def - (x: Rational): Rational = this sub x
+  def unary_- = this.neg
 
   // private def gcd(a: Int, b: Int): Int = {
   //   if(b == 0) a
